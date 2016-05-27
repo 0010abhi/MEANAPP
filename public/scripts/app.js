@@ -4,9 +4,9 @@
   	.module("pmpApp", ['ngRoute','ngMaterial', 'ngFileUpload','pmpApp.user'])
   	.config(configuration);
 
-  configuration.$inject = ['$routeProvider','$locationProvider'];
+  configuration.$inject = ['$routeProvider'];
   
-  function configuration($routeProvider,$locationProvider)
+  function configuration($routeProvider)
   {
     $routeProvider
         .when("/", {
@@ -29,15 +29,7 @@
         {
             redirectTo: "/"
         });
-    
-//    $locationProvider.html5Mode({
-//        enabled: true,
-//        requireBase: true
-//    });
-};
 
-//app.controller("indexController", function ($scope, $http)
-//{
-//
-//});
+  }
+
 })(window.angular);

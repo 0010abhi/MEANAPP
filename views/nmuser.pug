@@ -12,13 +12,13 @@ block content
 					a(class="log btn btn-primary" ng-click="LogOut()") Logout
 		div(class="row" style="margin-right:-15px;margin-left: 0px;")
 			div(class="sideNav col-sm-3")
-				a(ng-href="/users/Profile" class="sideNavAnchor")
+				a(ng-href="/users#/Profile" class="sideNavAnchor")
 					div(id="Profile" class="sideNavOptions myactive") My Profile
-				a(ng-href="/users/TrainingPlan" class="sideNavAnchor")
+				a(ng-href="/users#/TrainingPlan" class="sideNavAnchor")
 					div(id="TrainingPlan" class="sideNavOptions") Training Plan
-				a(ng-href="/users/Skills" class="sideNavAnchor")
+				a(ng-href="/users#/Skills" class="sideNavAnchor")
 					div(id="Skills"  class="sideNavOptions") Skills
-				a(ng-href="/users/UploadResume" class="sideNavAnchor")
+				a(ng-href="/users#/UploadResume" class="sideNavAnchor")
 					div(id="UploadResume"  class="sideNavOptions") Upload Resume	
 			div(class="col-sm-9" ng-view)
 		div(class="myFooter")
