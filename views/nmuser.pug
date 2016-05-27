@@ -1,0 +1,29 @@
+extends layout
+block content
+	div(ng-controller="userController" class="container-fluid")
+		div(style="background-color: #6699ff;height:100px;padding-top:10px;")
+			div(class="col-md-10" style="color: white !important;text-decoration: none;font-size:30px;padding-top:10px;")
+				span Project Management Portal
+			div(class="col-md-2")
+				div(style="float:right ; padding-right:20px;padding-top:50px; color:black;")
+					input(type="hidden" value=data)#userdata
+					span(style="color:#fff;font-size:20px;font-family:cursive;font-weight:bold;") Hi,
+					span(style="color:black;font-size:18px;font-family:cursive;padding-right:15px;")= id 
+					a(class="log btn btn-primary" ng-click="LogOut()") Logout
+		div(class="row" style="margin-right:-15px;margin-left: 0px;")
+			div(class="sideNav col-sm-3")
+				a(ng-href="/users/Profile" class="sideNavAnchor")
+					div(id="Profile" class="sideNavOptions myactive") My Profile
+				a(ng-href="/users/TrainingPlan" class="sideNavAnchor")
+					div(id="TrainingPlan" class="sideNavOptions") Training Plan
+				a(ng-href="/users/Skills" class="sideNavAnchor")
+					div(id="Skills"  class="sideNavOptions") Skills
+				a(ng-href="/users/UploadResume" class="sideNavAnchor")
+					div(id="UploadResume"  class="sideNavOptions") Upload Resume	
+			div(class="col-sm-9" ng-view)
+		div(class="myFooter")
+			span(style="float:left")
+				span(class="glyphicon glyphicon-envelope")     0010abhi@gmail.com  |
+				span(class="glyphicon glyphicon-phone")     +91-7597390172
+			span(style="float:right")
+				p OCT 2015 Batch

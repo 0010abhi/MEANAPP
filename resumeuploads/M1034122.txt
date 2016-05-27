@@ -1,0 +1,33 @@
+db.userdata1.group({
+    key: {"RaisedRequirement.AngularJS":true},
+    initial: {sum:0},
+    reduce: function(doc, prev) {prev.sum +=1},
+});
+
+db.userdata1.aggregate(
+    {$unwind: '$RaisedRequirement'},
+    {$group: {_id: '$RaisedRequirement.AngularJS', sum: {$sum: 1}}}
+);
+
+db.userdata1.aggregate(
+   {$group : { _id : '$RaisedRequirement', count : {$sum : 1}}}
+
+)
+
+db.runCommand(
+{ 
+	group : 
+	{
+		ns : 'userdata1', 
+		key: {EmpId:1,"RaisedRequirement.AngularJS":1, "RaisedRequirement.NodeJS":1,"RaisedRequirement.BigData":1,"RaisedRequirement.DevOps":1},
+ 		cond: {},
+		$reduce: function(curr,result)
+				{
+					result.angularvacancy += curr.RaisedRequirement.AngularJS; 
+					result.nodevacancy +=curr.RaisedRequirement.NodeJS;
+					result.bigdatavacancy += curr.RaisedRequirement.BigData; 
+					result.devopsvacancy += curr.RaisedRequirement.DevOps;
+				 }, 
+		initial : {angularvacancy:0, nodevacancy:0, bigdatavacancy:0, devopsvacancy:0}
+	}
+})

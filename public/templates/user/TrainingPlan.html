@@ -1,0 +1,93 @@
+<div class="rightBody " style="padding-top:0px;" ng-controller="nmpuserController">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+        <h4 class="panel-title">Plan New Training</h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+     <div id="NewTraining" class="col-sm-offset-3 col-sm-8 "> 
+     <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">Technology</label>
+            <div class="col-sm-6 control-label">
+                <select class="form-control" ng-model=TrainingTech ng-options="Technologies.Value as Technologies.Name for Technologies in TrainingPlanTechnologies">
+	            </select>
+	        </div> 
+      </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">Start Date</label>
+        <div class="col-sm-6 control-label">
+        <md-datepicker ng-model="StartDate" md-placeholder="Enter date" required md-min-date="minStartDate" md-max-date="maxStartDate">
+        </md-datepicker>
+        </div>
+    </div>
+       <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">End Date</label>
+        <div class="col-sm-6 control-label">
+        <md-datepicker data-ng-model="EndDate" data-md-placeholder="Enter date" required data-md-min-date="minEndDate" data-md-max-date="maxEndDate">
+         </md-datepicker>
+         </div>
+        </div>
+      <div class="col-sm-3 col-sm-offset-6" style="padding-left:40px;">
+          <button type="submit" class="btn btn-primary" ng-click=PlanTheTraining(TrainingTech,StartDate,EndDate)>Submit</button>
+      </div>
+     </form> 
+          </div>
+        
+          <div id="ProposedTrainings" class="col-md-offset-1 col-md-10 collapse" style="padding-top:15px;">
+          <table class="table table-bordered">
+ <thead>
+ <tr>
+     <th>Technology</th>
+     <th>Start Date</th>
+     <th>End Date</th>
+     <th>Status</th>
+     </tr>
+ </thead>
+ <tr ng-repeat="data in EmployeeData.TrainingPlan">
+ <td>{{data[$index].Technology}}</td>
+  <td>{{convertDate(data[$index].StartDate)}}</td>
+   <td>{{convertDate(data[$index].EndDate)}}</td>
+   <td><md-button class="md-primary md-raised" ng-click="showConfirm($event,data)" >
+      {{status}}
+    </md-button></td>
+ </tr>
+</table>
+    </div> 
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div  class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#collapse2" >
+        <h4 class="panel-title">See Proposed Trainings</h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+<div id="ProposedTrainings" class="col-md-offset-2 col-md-8" style="padding-top:15px;">
+          <table class="table table-bordered">
+ <thead>
+ <tr>
+     <th>Technology</th>
+     <th>Start Date</th>
+     <th>End Date</th>
+     <th>Status</th>
+     </tr>
+ </thead>
+ <tr ng-repeat="data in loggedUserData[0].TrainingPlan">
+ <td>{{loggedUserData[0].TrainingPlan[$index].Technology}}</td>
+  <td>{{convertDate(loggedUserData[0].TrainingPlan[$index].StartDate)}}</td>
+   <td>{{convertDate(loggedUserData[0].TrainingPlan[$index].EndDate)}}</td>
+   <td><md-button class="md-primary md-raised" ng-click="showConfirm($event,data)" >
+      {{status}}
+    </md-button></td>
+ </tr>
+</table>
+    </div>   
+</div>
+      </div>
+    </div>
+
+  </div>   
+          
+ </div>

@@ -1,0 +1,21 @@
+extends layout
+block content
+  div(class=".row myContainer")
+        div(class="row indexHeader")
+            div(class="col-md-9")
+                h2  
+                a(href="#/" style="color: white !important;text-decoration: none;") Project Management Portal
+               
+            div(class="col-md-1 indexBtn")
+                a(class="btn btn-primary" href="#/register") Register
+            div(class="col-md-1 indexBtn")
+                a(class="btn btn-primary" href="#/login") Log In
+            div(class="col-md-1")
+        div(class="viewClass" ng-view)
+        div(class="myFooter")
+                    span(style="float:left")
+                        span(class="glyphicon glyphicon-envelope")
+                        a(href="mailto:ResourceTraker@mindtree.com?") Email|
+                    span(class="glyphicon glyphicon-phone") 999999   
+                    span(style="float:right")
+                        p OCT 2015 Batch       	                

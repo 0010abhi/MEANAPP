@@ -1,0 +1,24 @@
+ <div class="rightBody" ng-controller="nmpuserController">
+        <div class="col-sm-8 col-sm-offset-2"> 
+        <div class="form-group"> 
+                      
+         <label for="inputEmail3">Web Services</label>
+       <textarea class = "form-control" rows = "2" ng-model=Skills.WebTechnology></textarea>
+</div>
+     <div class="form-group">
+        
+         <label for="inputEmail3">Mobile Services</label>
+       <textarea class = "form-control" rows = "2" ng-model=Skills.MobileTechnology></textarea>
+      
+       </div>   
+       <div class="form-group">
+        
+        <label for="inputEmail3" >UI Services</label>
+       <textarea class = "form-control" rows = "2" ng-model=Skills.UITechnology></textarea>
+       
+      </div>
+      </div>
+        <div class="form-group">
+         <div class="col-sm-3 col-sm-offset-8" style="padding-left:48px;"><button type="submit" class="btn btn-primary" ng-click="SaveSkills(Skills)">SAVE</button></div>
+            </div>
+        </div>

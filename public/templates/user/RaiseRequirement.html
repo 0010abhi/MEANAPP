@@ -1,0 +1,64 @@
+<div class="rightBody" style="padding-top:0px;" ng-controller="mpuserController">
+{{Message}}
+ <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#Requirements">
+        <h4 class="panel-title">Raise Requirements</h4>
+      </div>
+      <div id="Requirements" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="col-sm-offset-2 col-sm-8"> 
+     <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">Technology</label>
+            <div class="col-sm-6 control-label">
+                <select class="form-control"  ng-model="requirement.technology" ng-options="RequirementOption.value as RequirementOption.name for RequirementOption in RaiseRequirementOption">
+	            </select>
+	        </div> 
+      </div>
+
+       <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">Requirement</label>
+        <div class="col-sm-6 control-label">
+         <input class="form-control" type="number" min="1" ng-model="requirement.number" />     
+	     </div>
+        </div>
+      <div class="col-sm-3 col-sm-offset-6" style="
+    padding-left: 40px;">
+          <button type="submit" class="btn btn-primary" ng-click=RaiseRequirement(requirement)>Submit</button>
+      </div>
+     </form> 
+          </div>
+      </div>
+    </div>
+    </div>
+	
+	<div class="panel panel-default">
+      <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#ProposedRequirements">
+        <h4 class="panel-title">Proposed Requirements
+        </h4>
+      </div>
+      <div id="ProposedRequirements" class="panel-collapse collapse">
+        <div class="panel-body">
+			<div class="col-md-offset-2 col-md-6" style="padding-top:15px;">
+          <table class="table table-striped">
+ <thead>
+ <tr>
+     <th>Technology</th>
+     <th>Requirement</th>
+     </tr>
+ </thead>
+ <tr ng-if="value>0" ng-repeat="(key,value) in loggedUserData[0].RaisedRequirement">
+ <td>{{key}}</td>
+  <td>{{value}}</td>
+ </tr>
+</table>
+          </div>
+		</div>
+      </div>
+    </div>
+
+  </div>
+
+          
+        </div>

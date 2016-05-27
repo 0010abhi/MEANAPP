@@ -1,0 +1,98 @@
+
+ <div class="rightBody " ng-controller="mpuserController">
+     <div layout="row" layout-wrap>
+    <div flex="100" layout="column">
+      <div class="col-md-offset-1">
+        <fieldset style="padding-left:50px;" class="demo-fieldset" >
+         
+        
+            <div class="checkbox-inline"  ng-repeat="item in items">
+              <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected);DataRequired(selected)">
+               {{ item }}
+              </md-checkbox>
+            </div>
+       
+        </fieldset>
+      </div>
+    </div>
+ </div>
+<div class="col-md-offset-1 col-md-10" style="padding-top:15px;">
+     <table class="table table-striped">
+ <thead>
+ <tr>
+     <th> Mid </th>
+     <th> Name</th>
+     <th>Email</th>
+     <th>Resume</th>
+     </tr>
+ </thead>
+ 
+ <tr data-ng-repeat="data in BenchData">
+ <td><a data-toggle="modal" data-target="#myModal" ng-click=PassDataToModal(data)>{{data.EmpId}}</a></td>
+ <td>{{data.FirstName}} {{data.LastName}}</td>
+ <td>{{ data.Email}}</td>
+ 
+ <td><a ng-click="downloadResume(data.EmpId)">resume-{{data.EmpId}}</a></td>
+ </tr>
+</table>
+     </div>
+     </div>
+     
+     
+         <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" >M1034197</button>-->
+       <div class="modal fade" id="myModal" role="dialog">
+     <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Profile Information</h4>
+          <h5>{{SpecificData.EmpId}} : {{SpecificData.Vertical}} : {{SpecificData.Competency}}</h5>
+          <h5>{{SpecificData.FirstName}} {{SpecificData.LastName}}</h5> 
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title">Training Details</h4>
+           
+           <table class="table table-bordered">
+ <thead>
+     <td>Technology</td>
+     <td>Start Date</td>
+     <td>End Date</td>
+ </thead>
+ <tr ng-repeat="data in SpecificData.TrainingPlan">
+ <td>{{SpecificData.TrainingPlan[$index].Technology}}</td>
+  <td>{{convertDate(SpecificData.TrainingPlan[$index].StartDate)}}</td>
+   <td>{{convertDate(SpecificData.TrainingPlan[$index].EndDate)}}</td>
+ </tr>
+</table>
+<hr/>
+
+<h4 class="modal-title">Skills</h4>
+           
+ <table class="table table-bordered">
+ <thead>
+     <td>Technology Domain</td>
+     <td>Skills</td>
+ </thead>
+<tr>
+<td>Web</td>
+<td>{{SpecificData.Skills.WebTechnologies}}</td>
+</tr>
+<tr>
+<td>Mobile</td>
+  <td>{{SpecificData.Skills.MobileTechnologies}}</td>
+<tr>
+<td>User Interface</td>
+<td>{{SpecificData.Skills.UserInterface}}</td>
+</tr>
+</table>
+        </div>       
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

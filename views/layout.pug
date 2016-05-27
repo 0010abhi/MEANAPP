@@ -1,0 +1,33 @@
+doctype html
+html(ng-app="pmpApp")
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
+    script(src="/scripts/lib/angular.min.js")
+    script(src="/scripts/lib/angular-route.min.js")
+    script(src="/scripts/lib/ng-file-upload-shim.js")
+    script(src="/scripts/lib/ng-file-upload.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js") 
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js") 
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js") 
+    script(src="/scripts/app.js")
+  body
+    block content
+    script(src="/scripts/services/formmodelservice.js")
+    script(src="/scripts/services/responsemessageservice.js")
+    script(src="/scripts/controllers/mainController.js")
+    script(src="/scripts/controllers/loginController.js")
+    script(src="/scripts/controllers/registerController.js")
+    script(src="/scripts/controllers/forgotController.js")
+    script(src="/scripts/controllers/pmpApp.user.js")
+    script(src="/scripts/controllers/userController.js")
+    script(src="/scripts/controllers/mpuserController.js")
+    script(src="/scripts/controllers/nmpuserController.js")

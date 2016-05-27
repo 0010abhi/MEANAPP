@@ -1,0 +1,188 @@
+.sideNavAnchor:hover, .sideNavAnchor:visited, .sideNavAnchor:active, .sideNavAnchor:focus {
+text-decoration : none !important;
+}
+
+    .myContainer{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+.myHeader{
+   margin-left: 0px !important;
+   margin-right: 0px !important;
+   background-color:#6699ff;
+    margin:0px;
+    padding: 25px 10px 0px 25px;
+    height: 70px;
+    font-size:xx-large !important;
+   color: white !important;
+    text-decoration: none !important; 
+}
+.indexHeader{
+margin-left: 0px !important;
+   margin-right: 0px !important;
+   background-color:#6699ff;
+    margin:0px;
+    padding: 25px 10px;
+    height: 100px;
+    font-size:xx-large !important;
+   color: white !important;
+    text-decoration: none !important;
+}
+.myactive{
+background-color:#6699ff !important;
+color:white !important;
+}
+
+.body{
+    min-height:400px;
+    margin: 0px;
+	padding:30px;
+	background-image: url("/images/capture.jpg");
+	background-size:1000px 500px;
+	background-position: center; 
+    background-repeat: no-repeat;
+	
+}
+.leftBody{
+background-color:#ccddff;
+    min-height:350px;
+height:auto;
+    padding-top: 10px;
+	opacity:0.8;
+	margin-right:10px;
+}
+.rightBody{
+
+background-color: #ccddff;
+min-height:400px;
+    padding-top: 20px;
+height:auto;
+opacity:0.8;
+padding-bottom:20px;
+}
+.myFooter{
+   margin-left: 0px !important;
+   margin-right: 0px !important;
+background-color:#6699ff;
+margin: 0px;
+   padding: 20px 10px;
+    height: 50px;
+
+}
+    .indexBtn{
+     margin-left: 0px !important;
+     margin-right: 0px !important;
+     margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    }
+    .hotTechnologies li{
+        font-size: medium;
+        font-family: sans-serif;
+        color: #808080;
+        font-weight: bold;
+		color:black;
+    }
+    
+    .sideNav
+    {
+        opacity:0.8;
+        min-height: 300px !important;
+        background-color:#ccddff;
+        padding-right: 0px;
+    }
+   
+    .sideNavOptions
+    {
+            padding: 10px;
+    background-color:#99c2ff;
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: black;
+    
+       
+    }
+    
+    
+    .datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 10px 0 0 25px; }
+
+
+.sbtn {
+        
+alignment-adjust: central;
+}
+    
+   .checkboxdemoSelectAll .demo-legend {
+  color: #6699ff; }
+.checkboxdemoSelectAll .demo-fieldset {
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  alignment-adjust: after-edge;
+    }
+.checkboxdemoSelectAll .demo-select-all-checkboxes {
+  padding-left: 30px; }
+  
+  .logInForm{
+    padding: 40px 0px;
+    margin: 0px 0px 50px 0px;
+      
+  }
+  .Home{   
+    font-weight: 300;
+    font-size: 32px;
+    color: white !important;
+    text-decoration: none !important;
+    }
+    .RegForm{
+     padding: 0px 0px;
+     margin: 0px 0px 50px 0px;
+   
+  }
+  .log {
+    padding: 3px 10px !important;
+}
+
+.progressCirculardemoBasicUsage body {
+  padding: 20px; }
+.progressCirculardemoBasicUsage h4 {
+  margin: 10px 0; }
+.progressCirculardemoBasicUsage md-progress-circular {
+  margin-bottom: 20px; }
+.progressCirculardemoBasicUsage #loaders > md-switch {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -10px; }
+.progressCirculardemoBasicUsage #loaders > h5 {
+  margin-top: 0; }
+.progressCirculardemoBasicUsage #loaders > p {
+  margin-right: 20px;
+  margin-bottom: 24px; }
+.progressCirculardemoBasicUsage p.small {
+  font-size: 0.8em;
+  margin-top: -18px; }
+.progressCirculardemoBasicUsage hr {
+  width: 100%;
+  margin-top: 20px;
+  border-color: rgba(221, 221, 177, 0.1); }
+.progressCirculardemoBasicUsage p.small > code {
+  font-size: 0.8em; }
+.progressCirculardemoBasicUsage .visible {
+  border-color: rgba(221, 221, 177, 0); }
+
+.ariaExpandedTrue {
+    background-color: #6699FF;
+    color: white;
+}
+
+.ariaExpandedFalse {
+    background-color: #99c2FF;
+    color: black;
+}
