@@ -183,25 +183,8 @@ router.post('/api/verifyemail',function(req, res, next) {
 	var nodemailer = require('nodemailer');
 
 	// create reusable transporter object using the default SMTP transport
-	var transporter = nodemailer.createTransport('smtps://nirlittam.abhi@gmail.com:Or@cle!0G@smtp.gmail.com');
+	var transporter = nodemailer.createTransport('smtps://userEmail:password@smtp.gmail.com');
 
-//	var transporter = nodemailer.createTransport("SMTP", {
-//	    service: "Gmail",
-//	    auth: {
-//	        user: "nirlittam.abhi@gmail.com",
-//	        pass: "Or@cle!0G"
-//	    }
-//	});
-	// setup e-mail data with unicode symbols
-	var token = "AuthToken";
-	var text = 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n';
-	text += 'Please click on the following link, or paste this into your browser to complete the process:\n\n';
-	text += 'http://localhost:3000';
-		//+ req.Headers.Host
-	text += '/reset/' ;
-	text += token;
-	text += '\n\n';
-	text += 'If you did not request this, please ignore this email and your password will remain unchanged.\n';
 	var mailOptions = {
 	    from: '"Abhishek Sachdeva" <nirlittam.abhi@gmail.com>', // sender address
 	    to: '0010abhi@gmail.com', // list of receivers
